@@ -3,141 +3,300 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>im-stock 여행 마케팅 가이드</title>
+<title>im-stock OPEN Event</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:'Pretendard',sans-serif;background:#ffffff;color:#111}
-.section{padding:80px 20px}
-.container{max-width:820px;margin:0 auto}
+body{
+ margin:0;
+ font-family:'Pretendard',sans-serif;
+ background:#0f1115;
+ color:#fff;
+}
 
-.hero{background:#0f1115;color:#fff;text-align:center;padding:120px 20px}
-.hero h1{font-size:44px;margin:0 0 20px;font-weight:800}
-.hero p{font-size:20px;color:#cfd3dc}
+.container{
+ max-width:1200px;
+ margin:auto;
+ padding:80px 24px;
+}
 
-.step{margin-top:80px}
-.stepTitle{font-size:30px;font-weight:800;margin-bottom:20px}
-.stepSub{font-size:18px;color:#555;margin-bottom:40px}
+/* 헤더 */
+.logo{
+ font-size:28px;
+ font-weight:800;
+}
+.logo span{
+ color:#ff3b3b;
+}
 
-.card{background:#f6f7f9;border-radius:16px;padding:40px;margin-bottom:30px}
-.card h3{margin-top:0;font-size:22px}
-.card ul{margin:0;padding-left:20px;line-height:1.8;color:#444}
+/* 히어로 */
+.hero{
+ display:grid;
+ grid-template-columns:1.1fr 0.9fr;
+ gap:60px;
+ align-items:center;
+}
 
-.media{margin:30px 0}
-.media img,.media video{width:100%;border-radius:14px}
+.hero h1{
+ font-size:56px;
+ font-weight:800;
+ margin-bottom:20px;
+}
 
-.highlight{background:#19a463;color:white;border-radius:16px;padding:50px;text-align:center}
-.highlight h2{margin:0 0 10px;font-size:32px}
-.highlight p{margin:0;font-size:18px}
+.hero p{
+ color:#b8bcc8;
+ font-size:20px;
+}
 
-.cta{background:#111;color:white;text-align:center;padding:80px 20px}
-.cta h2{font-size:36px;margin-bottom:20px}
-.cta button{background:#19a463;border:none;color:white;font-size:20px;padding:18px 36px;border-radius:10px;font-weight:700;cursor:pointer}
+.highlight{
+ color:#ff3b3b;
+}
 
-footer{text-align:center;padding:40px;color:#777;font-size:14px}
+/* 버튼 */
+.cta{
+ margin-top:30px;
+}
+.cta button{
+ padding:16px 32px;
+ border:none;
+ border-radius:10px;
+ font-size:18px;
+ font-weight:700;
+ cursor:pointer;
+}
+.primary{
+ background:#ff3b3b;
+ color:#fff;
+}
+
+/* 카드 */
+.heroCard{
+ background:#161a22;
+ padding:40px;
+ border-radius:16px;
+ border:1px solid rgba(255,255,255,0.05);
+}
+.discount{
+ font-size:64px;
+ font-weight:800;
+ color:#ff3b3b;
+}
+
+/* 섹션 */
+.section{
+ margin-top:120px;
+}
+.sectionTitle{
+ font-size:36px;
+ font-weight:800;
+ text-align:center;
+ margin-bottom:50px;
+}
+
+/* 카드 그리드 */
+.grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:24px;
+}
+
+.card{
+ background:#161a22;
+ padding:30px;
+ border-radius:14px;
+ border:1px solid rgba(255,255,255,0.05);
+ transition:0.2s;
+}
+.card:hover{
+ transform:translateY(-5px);
+}
+
+.card h3{
+ margin-top:0;
+}
+.card p{
+ color:#9aa1b2;
+}
+
+/* 숫자 */
+.stats{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:20px;
+ text-align:center;
+}
+.stat{
+ background:#161a22;
+ padding:30px;
+ border-radius:14px;
+}
+.statNumber{
+ font-size:40px;
+ font-weight:800;
+ color:#ff3b3b;
+}
+
+/* 미리보기 */
+.previewGrid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:20px;
+}
+
+.previewItem{
+ position:relative;
+ height:180px;
+ border-radius:12px;
+ overflow:hidden;
+ background:#1a1f29;
+}
+
+.previewItem video{
+ position:absolute;
+ width:100%;
+ height:100%;
+ object-fit:cover;
+ opacity:0;
+ transition:0.2s;
+}
+
+.previewItem:hover video{
+ opacity:1;
+}
+
+/* 가격 */
+.pricing{
+ background:#161a22;
+ padding:50px;
+ border-radius:16px;
+ text-align:center;
+}
+.price{
+ font-size:60px;
+ color:#ff3b3b;
+ font-weight:800;
+}
+
+/* 반응형 */
+@media(max-width:900px){
+ .hero{grid-template-columns:1fr}
+ .grid{grid-template-columns:1fr}
+ .stats{grid-template-columns:1fr}
+ .previewGrid{grid-template-columns:1fr}
+}
 </style>
 </head>
+
 <body>
 
+<div class="container">
+
+<div class="logo"><span>●</span> im STOCK</div>
+
 <section class="hero">
-<h1>im-stock 여행 마케팅 필승 활용 가이드</h1>
-<p>여행 상품 판매를 바꾸는 콘텐츠 활용 전략</p>
+<div>
+<h1>
+im-stock <span class="highlight">OPEN EVENT</span><br>
+최대 50% 평생 할인
+</h1>
+
+<p>
+오늘의 할인가가 평생 구독료가 됩니다.<br>
+Price Lock으로 할인 유지
+</p>
+
+<div class="cta">
+<button class="primary">지금 구독 시작</button>
+</div>
+</div>
+
+<div class="heroCard">
+<div class="discount">50%</div>
+<p>이벤트 기간 한정</p>
+</div>
 </section>
 
 <section class="section">
-<div class="container">
+<div class="sectionTitle">콘텐츠 규모</div>
 
-<div class="step">
-<div class="stepTitle">STEP 1. 고객의 이탈을 막는 3초</div>
-<div class="stepSub">홈페이지 첫인상을 바꾸는 히어로 영상 활용법</div>
+<div class="stats">
+<div class="stat">
+<div class="statNumber">30,000+</div>
+<p>이미지</p>
+</div>
 
-<div class="media">
-<video autoplay muted loop playsinline>
-<source src="hero-preview.mp4" type="video/mp4">
+<div class="stat">
+<div class="statNumber">12,000+</div>
+<p>영상</p>
+</div>
+
+<div class="stat">
+<div class="statNumber">50+</div>
+<p>지역</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="sectionTitle">콘텐츠 미리보기</div>
+
+<div class="previewGrid">
+
+<div class="previewItem">
+<video muted loop>
+<source src="preview1.mp4">
 </video>
 </div>
 
-<div class="card">
-<ul>
-<li>메인 배너에 텍스트 대신 가로형 영상을 배치하세요</li>
-<li>미학적인 영상은 체류 시간을 크게 늘립니다</li>
-<li>첫 화면에서 브랜드 분위기를 전달하세요</li>
-</ul>
-</div>
-
-</div>
-
-<div class="step">
-<div class="stepTitle">STEP 2. 짧은 영상 하나가 결제를 앞당깁니다</div>
-<div class="stepSub">예약 전환율을 높이는 상세페이지 설계</div>
-
-<div class="media">
-<img src="detail-preview.jpg" />
-</div>
-
-<div class="card">
-<ul>
-<li>상품 설명 중간에 객실뷰, 음식, 풍경 영상을 삽입</li>
-<li>고객이 실제 여행을 경험하는 듯한 몰입감 제공</li>
-<li>영상으로 상품 신뢰도를 시각적으로 설득</li>
-</ul>
-</div>
-
-</div>
-
-<div class="step">
-<div class="stepTitle">STEP 3. 모든 접점에 영상 활용</div>
-<div class="stepSub">오프라인 매장과 B2B 제안서 활용 전략</div>
-
-<div class="media">
-<img src="offline-preview.jpg" />
-</div>
-
-<div class="card">
-<ul>
-<li>매장 TV에서 여행 영상을 루프로 재생</li>
-<li>B2B 제안서에 영상 삽입</li>
-<li>고급스러운 여행 브랜드 이미지를 전달</li>
-</ul>
-</div>
-
-</div>
-
-<div class="step">
-<div class="stepTitle">STEP 4. 여행은 상품이 아니라 이야기입니다</div>
-<div class="stepSub">유튜브 & 블로그 콘텐츠 제작 가이드</div>
-
-<div class="media">
-<video autoplay muted loop playsinline>
-<source src="story-preview.mp4" type="video/mp4">
+<div class="previewItem">
+<video muted loop>
+<source src="preview2.mp4">
 </video>
 </div>
 
-<div class="card">
-<ul>
-<li>B-roll 영상으로 현지 골목과 풍경 삽입</li>
-<li>영상 시작 5초 안에 가장 인상적인 장면 배치</li>
-<li>시네마틱 오프닝으로 시청 지속시간 확보</li>
-</ul>
-</div>
-
-</div>
-
-<div class="highlight">
-<h2>콘텐츠가 마케팅 성과를 만듭니다</h2>
-<p>im-stock 여행 전문 아카이브로 더 강력한 마케팅을 시작하세요</p>
+<div class="previewItem">
+<video muted loop>
+<source src="preview3.mp4">
+</video>
 </div>
 
 </div>
 </section>
 
-<section class="cta">
-<h2>지금 im-stock 콘텐츠 확인하기</h2>
-<button>콘텐츠 둘러보기</button>
+<section class="section">
+<div class="sectionTitle">왜 im-stock인가?</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>정직한 가격</h3>
+<p>데이터 기반 가격 정책</p>
+</div>
+
+<div class="card">
+<h3>마케팅 자산</h3>
+<p>1년 콘텐츠 확보</p>
+</div>
+
+<div class="card">
+<h3>Full License</h3>
+<p>상업적 이용 가능</p>
+</div>
+
+</div>
 </section>
 
-<footer>
-im-stock Marketing Guide</footer>
+<section class="section">
+<div class="pricing">
+<h2>연간 구독</h2>
+<div class="price">50% OFF</div>
+<button class="primary">지금 시작</button>
+</div>
+</section>
+
+</div>
 
 </body>
 </html>
