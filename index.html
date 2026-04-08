@@ -196,6 +196,31 @@ body{
 .logo img{
   height:60px;
 }
+
+ .previewGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.previewItem {
+    background-color: #1a1d23;
+    border: 1px solid #2d3748;
+    border-radius: 16px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a5568;
+}
+
+.previewItem video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 </style>
 
 
