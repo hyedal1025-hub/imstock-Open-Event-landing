@@ -251,12 +251,15 @@ body{
 
 <style>
 .previewItem {
-  width: 100%;           /* 그리드 너비에 맞춤 */
+  width: 320px;           /* 그리드 너비에 맞춤 */
   overflow: hidden;      /* 넘치는 영상 숨김 */
   border-radius: 8px;    /* 선택 사항: 모서리 둥글게 */
   background: #000;      /* 영상 로딩 전 검은 배경 */
 }
-.previewItem video {
+display: inline-block; 
+    margin: 10px;
+}
+ .previewItem video {
   width: 100%;           /* 가로를 꽉 채우고 */
   aspect-ratio: 16 / 9;  /* 가로세로 비율을 16:9로 고정 */
   object-fit: cover;     /* 영상이 찌그러지지 않게 꽉 채움 */
