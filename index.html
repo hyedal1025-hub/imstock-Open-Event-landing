@@ -250,87 +250,141 @@ body{
  </p>
 
 <style>
-.previewItem {
-  width: 320px;           /* 그리드 너비에 맞춤 */
-  overflow: hidden;      /* 넘치는 영상 숨김 */
-  border-radius: 8px;    /* 선택 사항: 모서리 둥글게 */
-  background: #000;      /* 영상 로딩 전 검은 배경 */
-}
-display: inline-block; 
-    margin: 10px;
-}
- .previewItem video {
-  width: 100%;           /* 가로를 꽉 채우고 */
-  aspect-ratio: 16 / 9;  /* 가로세로 비율을 16:9로 고정 */
-  object-fit: cover;     /* 영상이 찌그러지지 않게 꽉 채움 */
-  display: block;        /* 하단 미세한 공백 제거 */
-} 
-
 .previewGrid {
-    display: flex;
-    flex-wrap: wrap;          /* 공간이 부족하면 다음 줄로 넘김 */
-    justify-content: center;    /* 핵심: 가로 방향 중앙 정렬 */
-    gap: 20px;                /* 영상 박스 사이의 간격 */
- max-width: 1040px;         /* (320px * 3개) + (20px * 2개 간격) = 1000px + 여유분 */
-    margin: 0 auto;            /* 그리드 전체를 중앙으로 */
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    max-width: 1040px !important;
+    margin: 60px auto !important; /* 위아래 여백 추가 */
+    padding: 0 20px;
 }
 
 .previewItem {
-    width: 320px;             /* 창 크기가 변해도 고정될 너비 */
-    flex-shrink: 0;           /* 크기가 강제로 줄어드는 것 방지 */
+    width: 320px !important;      /* 너비 고정 */
+    height: 180px !important;     /* 높이 고정 (16:9 비율) */
+    flex-shrink: 0 !important;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 12px;
     background: #000;
+    cursor: pointer;
+}
+
+.previewItem video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 </style>
  
 <section class="section">
   <div class="sectionTitle">콘텐츠 미리보기</div>
   
-  <div class="previewItem">
-    <video 
-        poster="preview1.jpg" 
-        muted 
-        loop 
-        playsinline
-        onmouseover="this.play()" 
-        onmouseout="this.pause(); this.currentTime=0;">
-        <source src="preview2.mp4" type="video/mp4">
-    </video>
-</div>
+  <div class="previewGrid">
+    
     <div class="previewItem">
-      <video muted loop autoplay playsinline>
-        <source src="preview2.mp4" type="video/mp4">
-        Video
+      <video 
+          poster="preview1.jpg" 
+          muted 
+          loop 
+          playsinline
+          onmouseover="this.play()" 
+          onmouseout="this.pause(); this.currentTime=0;">
+          <source src="preview1.mp4" type="video/mp4">
       </video>
     </div>
-    <div class="previewItem">
-      <video muted loop autoplay playsinline>
-        <source src="preview3.mp4" type="video/mp4">
-        Video
-      </video>
-    </div>
-    <div class="previewItem">
-      <video muted loop autoplay playsinline>
-        <source src="preview4.mp4" type="video/mp4">
-        Video
-      </video>
-    </div>
-    <div class="previewItem">
-      <video muted loop autoplay playsinline>
-        <source src="preview5.mp4" type="video/mp4">
-        Video
-      </video>
-    </div>
-    <div class="previewItem">
-      <video muted loop autoplay playsinline>
-        <source src="preview6.mp4" type="video/mp4">
-        Video
-      </video>
-    </div>
-  </div>
-</section>
 
+    <div class="previewItem">
+      <video 
+          poster="preview2.jpg" 
+          muted 
+          loop 
+          playsinline
+          onmouseover="this.play()" 
+          onmouseout="this.pause(); this.currentTime=0;">
+          <source src="preview2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="previewItem">
+      <video 
+          poster="preview3.jpg" 
+          muted 
+          loop 
+          playsinline
+          onmouseover="this.play()" 
+          onmouseout="this.pause(); this.currentTime=0;">
+          <source src="preview3.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="previewItem">
+      <video 
+          poster="preview4.jpg" 
+          muted 
+          loop 
+          playsinline
+          onmouseover="this.play()" 
+          onmouseout="this.pause(); this.currentTime=0;">
+          <source src="preview4.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="previewItem">
+      <video 
+          poster="preview5.jpg" 
+          muted 
+          loop 
+          playsinline
+          onmouseover="this.play()" 
+          onmouseout="this.pause(); this.currentTime=0;">
+          <source src="preview5.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="previewItem">
+      <video 
+          poster="preview6.jpg" 
+          muted 
+          loop 
+          playsinline
+          onmouseover="this.play()" 
+          onmouseout="this.pause(); this.currentTime=0;">
+          <source src="preview6.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div> </section>
+<style>
+/* CSS도 깔끔하게 정리해 드립니다 */
+.previewGrid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    max-width: 1040px !important;
+    margin: 60px auto !important; /* 위아래 여백 추가 */
+    padding: 0 20px;
+}
+
+.previewItem {
+    width: 320px !important;      /* 너비 고정 */
+    height: 180px !important;     /* 높이 고정 (16:9 비율) */
+    flex-shrink: 0 !important;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+    cursor: pointer;
+}
+
+.previewItem video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+</style>
 <style>
    .event-section {
   background-color: #121316;
