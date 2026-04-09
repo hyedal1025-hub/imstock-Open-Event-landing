@@ -287,13 +287,17 @@ display: inline-block;
 <section class="section">
   <div class="sectionTitle">콘텐츠 미리보기</div>
   
-  <div class="previewGrid">
-    <div class="previewItem">
-      <video poster="preview1.jpg" controls>
-        <source src="preview1.mp4" type="video/mp4">
-        Video
-      </video>
-    </div>
+  <div class="previewItem">
+    <video 
+        poster="preview1.jpg" 
+        muted 
+        loop 
+        playsinline
+        onmouseover="this.play()" 
+        onmouseout="this.pause(); this.currentTime=0;">
+        <source src="preview2.mp4" type="video/mp4">
+    </video>
+</div>
     <div class="previewItem">
       <video muted loop autoplay playsinline>
         <source src="preview2.mp4" type="video/mp4">
