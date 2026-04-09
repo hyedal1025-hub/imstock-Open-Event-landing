@@ -245,7 +245,26 @@ body{
   </section>
 </div>
 
-<img src="benefits_full.png" alt="혜택 설명 이미지" style="width: 65%; display: block; margin: 60px auto;">
+ <style>
+  .benefits-image {
+    display: block;
+    margin: 60px auto;
+    
+    /* 1번 이미지와 같은 비율을 유지하기 위한 핵심 설정 */
+    width: 100%;           /* 부모 요소 안에서 꽉 차게 하되 */
+    max-width: 800px;      /* 실제 텍스트 영역과 대비하여 적절한 고정 크기 지정 */
+    
+    height: auto;          /* 가로세로 비율 유지 */
+}
+  @media (max-width: 900px) {
+    .benefits-image {
+        max-width: 90% !important; /* 모바일에서는 창 너비에 맞춰 자연스럽게 축소 */
+        margin: 40px auto;
+    }
+}
+ </style>
+
+<img src="benefits_full.png" alt="혜택 설명 이미지" class="benefits-image">
 
  </p>
 
