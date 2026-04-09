@@ -265,6 +265,23 @@ display: inline-block;
   object-fit: cover;     /* 영상이 찌그러지지 않게 꽉 채움 */
   display: block;        /* 하단 미세한 공백 제거 */
 } 
+
+.previewGrid {
+    display: flex;
+    flex-wrap: wrap;          /* 공간이 부족하면 다음 줄로 넘김 */
+    justify-content: center;    /* 핵심: 가로 방향 중앙 정렬 */
+    gap: 20px;                /* 영상 박스 사이의 간격 */
+    padding: 20px;
+    width: 100%;              /* 부모 너비에 맞춤 */
+}
+
+.previewItem {
+    width: 320px;             /* 창 크기가 변해도 고정될 너비 */
+    flex-shrink: 0;           /* 크기가 강제로 줄어드는 것 방지 */
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000;
+}
 </style>
  
 <section class="section">
