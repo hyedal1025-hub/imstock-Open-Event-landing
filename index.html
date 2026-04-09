@@ -145,21 +145,24 @@ body{
  gap:20px;
 }
 
-.previewItem{
- position:relative;
- height:180px;
- border-radius:12px;
- overflow:hidden;
- background:#1a1f29;
+.previewItem {
+    width: 320px !important;
+    height: 180px !important;
+    flex-shrink: 0 !important;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000; /* 영상 로딩 전 배경 */
+    cursor: pointer;
+    position: relative;
 }
 
-.previewItem video{
- position:absolute;
- width:100%;
- height:100%;
- object-fit:cover;
- opacity:1;
- transition:0.2s;
+.previewItem video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background-size: cover;
+    background-position: center;
 }
 
 .previewItem:hover video{
@@ -309,7 +312,7 @@ body{
           loop 
           playsinline
           onmouseover="this.play()" 
-          onmouseout="this.pause(); this.load();"> <source src="preview1.mp4" type="video/mp4">
+          onmouseout="this.pause(); this.currentTime = 0;"> <source src="preview1.mp4" type="video/mp4">
       </video>
     </div>
 
@@ -320,7 +323,7 @@ body{
           loop 
           playsinline
           onmouseover="this.play()" 
-          onmouseout="this.pause(); this.load();"> <source src="preview2.mp4" type="video/mp4">
+          onmouseout="this.pause(); this.currentTime = 0;"> <source src="preview2.mp4" type="video/mp4">
       </video>
     </div>
 
@@ -331,7 +334,7 @@ body{
           loop 
           playsinline
           onmouseover="this.play()" 
-          onmouseout="this.pause(); this.load();"> <source src="preview3.mp4" type="video/mp4">
+          onmouseout="this.pause(); this.currentTime = 0;"> <source src="preview3.mp4" type="video/mp4">
       </video>
     </div>
 
@@ -342,7 +345,7 @@ body{
           loop 
           playsinline
           onmouseover="this.play()" 
-          onmouseout="this.pause(); this.load();"> <source src="preview4.mp4" type="video/mp4">
+          onmouseout="this.pause(); this.currentTime = 0;"> <source src="preview4.mp4" type="video/mp4">
       </video>
     </div>
 
@@ -353,7 +356,7 @@ body{
           loop 
           playsinline
           onmouseover="this.play()" 
-          onmouseout="this.pause(); this.load();"> <source src="preview5.mp4" type="video/mp4">
+          onmouseout="this.pause(); this.currentTime = 0;"> <source src="preview5.mp4" type="video/mp4">
       </video>
     </div>
 
@@ -364,7 +367,7 @@ body{
           loop 
           playsinline
           onmouseover="this.play()" 
-          onmouseout="this.pause(); this.load();"> <source src="preview6.mp4" type="video/mp4">
+          onmouseout="this.pause(); this.currentTime = 0;"> <source src="preview6.mp4" type="video/mp4">
       </video>
     </div>
 
