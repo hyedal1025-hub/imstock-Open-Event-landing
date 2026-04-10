@@ -139,21 +139,26 @@ body{
 }
 
 /* 미리보기 */
-.previewGrid{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:20px;
+.previewGrid {
+    display: grid;
+    /* 화면 너비에 따라 320px 크기의 아이템을 자동으로 꽉 채움 */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 20px;
+    max-width: 1040px;
+    margin: 60px auto;
+    padding: 0 20px;
+    justify-content: center;
 }
 
 .previewItem {
-    width: 320px !important;
-    height: 180px !important;
-    flex-shrink: 0 !important;
+    width: 100%; /* 부모 grid 칸에 맞춤 */
+    aspect-ratio: 16 / 9; /* 높이를 비율로 고정 */
     overflow: hidden;
     border-radius: 12px;
-    background: #000; /* 영상 로딩 전 배경 */
+    background: #000;
     cursor: pointer;
     position: relative;
+    display: block; /* a 태그일 경우를 대비 */
 }
 
 .previewItem video {
@@ -161,8 +166,6 @@ body{
     height: 100%;
     object-fit: cover;
     display: block;
-    background-size: cover;
-    background-position: center;
 }
 
 .previewItem:hover video{
